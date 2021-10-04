@@ -4,25 +4,33 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700& display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/main.min.css">
   <title>Films</title>
 </head>
 <body>
-		<form>
-			<select>
-				<option value="fantasy">Fantasy</option>
-				<option value="action">Action</option>
-				<option value="drama">Drama</option>
-				<option value="comedy">Comedy</option>
-			</select>
-
-			<button type="submit">Submit</button>
-		</form>
-
-		<ul class="list"></ul>
+		<main>
+			<section>
+				<div class="container">
+					<form class="film__form">
+						<select class="film__select">
+							<option value="fantasy">Fantasy</option>
+							<option value="action">Action</option>
+							<option value="drama">Drama</option>
+							<option value="comedy">Comedy</option>
+						</select>
+						<button class="film__button" type="submit">Submit</button>
+					</form>
+					<ul class="list"></ul>
+				</div>
+			</section>
+		</main>
 
 		<script src="js/films.js"></script>
+		<script src="js/utils.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

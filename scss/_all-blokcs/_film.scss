@@ -1,0 +1,38 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding-left: 0;
+  margin-left: -30px;
+  padding-top: 100px;
+}
+.list__item {
+
+  width: 20%;
+  margin-left: 30px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+.list__item:not(:last-child) {
+  flex-grow: 1;
+}
+.film__form {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+.film__select {
+  padding: 15px 95px;
+  border: none;
+  background-color: $light-grey;
+  margin-right: 10px;
+
+}
+.film__button {
+  border: none;
+  padding: 10px 35px;
+  color: $white;
+  background-color: $orange;
+  border-radius: 5px;
+}

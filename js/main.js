@@ -55,7 +55,7 @@ function renderFilms(arr, node) {
 	});
 }
 
-renderFilms(films, elLisdt);
+renderFilms(films, elList);
 
 
 // var objects = [
