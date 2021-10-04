@@ -221,6 +221,8 @@ img {
 }
 
 .list__item {
+  position: relative;
+  text-align: center;
   width: 20%;
   margin-left: 30px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -230,6 +232,15 @@ img {
 
 .list__item:not(:last-child) {
   flex-grow: 1;
+}
+
+.list__item time {
+  position: absolute;
+  display: block;
+  text-align: left;
+  right: 15px;
+  bottom: 2px;
+  color: #949494;
 }
 
 .film__form {
@@ -251,4 +262,31 @@ img {
   color: #fff;
   background-color: #FFBD54;
   border-radius: 5px;
+}
+
+.film__heading {
+  height: 100px;
+  color: #FFBD54;
+  font-weight: 700;
+}
+
+.film__text {
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.film__genre {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -5px;
+  list-style: none;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.film__genre li {
+  color: lightsalmon;
+  background-color: rgba(255, 160, 122, 0.212);
+  margin-left: 5px;
+  font-weight: 600;
 }/*# sourceMappingURL=main.css.map */

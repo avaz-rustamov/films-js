@@ -38,9 +38,11 @@ function renderFilms(arr, node) {
 
 		newLi.setAttribute('class', 'list__item film');
 		newHeading.setAttribute('class', 'film__heading');
+    newParagraph.setAttribute('class', 'film__text');
 		newImage.setAttribute('class', 'film__image');
 		newImage.setAttribute('src', film.poster);
 		newImage.setAttribute('alt', film.title + ' poster');
+    newGenreList.setAttribute('class', 'film__genre');
 
 		newImage.setAttribute('width', '200');
 		newImage.setAttribute('height', '200');
@@ -48,8 +50,8 @@ function renderFilms(arr, node) {
 		newLi.appendChild(newHeading);
 		newLi.appendChild(newImage);
 		newLi.appendChild(newParagraph);
-		newLi.appendChild(newTime);
 		newLi.appendChild(newGenreList);
+		newLi.appendChild(newTime);
 
 		node.appendChild(newLi);
 	});
