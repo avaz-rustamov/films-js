@@ -45,6 +45,12 @@
   background-color: $orange;
   border-radius: 5px;
 }
+.film__button:hover {
+  background-color: #ffbd54c2;
+}
+.film__button:active {
+  background-color: #ffbd5480;
+}
 .film__heading {
   height: 100px;
   color: $orange;

@@ -1,8 +1,11 @@
 let elList = document.querySelector('.list');
+let elOption = document.querySelector('.film__select');
+let elForm = document.querySelector('.film__form');
 
 elList.innerHTML = null;
 
-function generateGenres(films) {
+function generateGenres(films, shox) {
+
 	let result = [];
 
 	films.forEach((film) => {
@@ -12,11 +15,20 @@ function generateGenres(films) {
 			}
 		});
 	});
+
+	result.forEach(genre => {
+		const newOption = document.createElement('option');
+		newOption.value = genre;
+		newOption.textContent = genre;
+		shox.appendChild(newOption);
+	});
+
 }
 
-generateGenres(films);
+
 
 function renderFilms(arr, node) {
+	innerHTML = null
 	arr.forEach((film) => {
 		let newLi = document.createElement('li');
 		let newHeading = document.createElement('h3');
@@ -57,8 +69,24 @@ function renderFilms(arr, node) {
 	});
 }
 
-renderFilms(films, elList);
+elForm.addEventListener('submit', (evt) =>{
+	evt.preventDefault();
+	const genreValeue = elOption.value;
+	let filterFilm = [];
+	if (genreValeue === "all") {
+			filterFilm = films;
+	} else {
+		const filterFilm = films.filter((film) =>
+	   film.genres.includes(genreValeue),
+		 );
+	}
+		 renderFilms(filterFilm, elList);
+});
 
+renderFilms(films, elList);
+generateGenres(films, elOption);
+
+// console.log(filterFilm)
 
 // var objects = [
 //   {
