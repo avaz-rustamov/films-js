@@ -1,6 +1,6 @@
 let elList = document.querySelector('.list');
 let elOption = document.querySelector('.film__select');
-let elForm = document.querySelector('.film__form');
+let elForm = document.querySelector('.film__form');	
 
 elList.innerHTML = null;
 
@@ -28,7 +28,7 @@ function generateGenres(films, shox) {
 
 
 function renderFilms(arr, node) {
-	innerHTML = null
+	// innerHTML = null
 	arr.forEach((film) => {
 		let newLi = document.createElement('li');
 		let newHeading = document.createElement('h3');
@@ -73,57 +73,15 @@ elForm.addEventListener('submit', (evt) =>{
 	evt.preventDefault();
 	const genreValeue = elOption.value;
 	let filterFilm = [];
-	if (genreValeue === "all") {
+	if (genreValeue === "All") {
 			filterFilm = films;
 	} else {
 		const filterFilm = films.filter((film) =>
 	   film.genres.includes(genreValeue),
 		 );
 	}
-		 renderFilms(filterFilm, elList);
+		 renderFilms(filterFilm, elOption);
 });
 
 renderFilms(films, elList);
 generateGenres(films, elOption);
-
-// console.log(filterFilm)
-
-// var objects = [
-//   {
-//     "firstname": "Asdbek",
-//     "Lastname": "Makhmudjonov",
-//     "age": 19,
-
-//   },
-//   {
-//     "firstname": "bekzod",
-//     "Lastname": "Makhmudjonov",
-//     "age": 18,
-
-//   },
-//   {
-//     "firstname": "sardor",
-//     "Lastname": "Makhmudjonov",
-//     "age": 17,
-
-//   },
-//   {
-//     "firstname": "abdulaziz",
-//     "Lastname": "Makhmudjonov",
-//     "age": 21,
-
-//   },
-
-
-// ]
-// objects.forEach(i => {
-// 	console.log(i.firstname);
-// 	console.log(i.Lastname);
-// 	console.log(i.age);
-// });
-// objects.map((obj) => {
-// 	obj.age = 100;
-// 	return obj;
-// })
-// console.log(objects);
-
